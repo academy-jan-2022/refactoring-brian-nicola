@@ -2,9 +2,15 @@ package com.football;
 
 public class FootballScoreStats {
 
+    private final GameData footballData;
+
+    public FootballScoreStats(GameData gameData) {
+        footballData = gameData;
+    }
+
     public int teamTotal(String teamName) {
         int total = 0;
-        Game[] played = Game.getAllPlayed();
+        Game[] played = footballData.getAllPlayed();
         for (Game game : played) {
             total += game.getTeamScore(teamName);
         }

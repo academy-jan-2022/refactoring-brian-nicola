@@ -14,37 +14,13 @@ public class Game {
         this.awayTeamScore = awayTeamScore;
     }
 
-    public static Game[] getAllPlayed() {
-        Game[] played = new Game[3];
-        played[0] = new Game("Liverpool", 2, "Everton", 0);
-        played[1] = new Game("Aston Villa", 1, "Liverpool", 1);
-        played[2] = new Game("Liverpool", 3, "West Ham", 1);
-        return played;
-    }
-
-    public String getHomeTeam() {
-        return homeTeam;
-    }
-
-    public int getHomeTeamScore() {
-        return homeTeamScore;
-    }
-
-    public String getAwayTeam() {
-        return awayTeam;
-    }
-
-    public int getAwayTeamScore() {
-        return awayTeamScore;
-    }
-
-    public int getTeamScore(String teamName) {
+    int getTeamScore(String teamName) {
         int total = 0;
             if (homeTeam.equals(teamName)) {
-                total += homeTeamScore;
+                total = homeTeamScore;
             }
             if (awayTeam.equals(teamName)) {
-                total += awayTeamScore;
+                total = awayTeamScore;
             }
         return total;
     }
