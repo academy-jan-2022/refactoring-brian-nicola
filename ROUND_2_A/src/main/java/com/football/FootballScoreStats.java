@@ -6,12 +6,7 @@ public class FootballScoreStats {
         int total = 0;
         Game[] played = Game.getAllPlayed();
         for (Game game : played) {
-            if (game.getHomeTeam().equals(teamName)) {
-                total += game.getHomeTeamScore();
-            }
-            if (game.getAwayTeam().equals(teamName)) {
-                total += game.getAwayTeamScore();
-            }
+            total += game.getTeamScore(teamName);
         }
         return total;
     }

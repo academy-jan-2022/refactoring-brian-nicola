@@ -38,4 +38,15 @@ public class Game {
         return awayTeamScore;
     }
 
+    public int getTeamScore(String teamName) {
+        int total = 0;
+            if (homeTeam.equals(teamName)) {
+                total += homeTeamScore;
+            }
+            if (awayTeam.equals(teamName)) {
+                total += awayTeamScore;
+            }
+        return total;
+    }
+
 }
