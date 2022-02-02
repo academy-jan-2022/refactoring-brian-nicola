@@ -1,3 +1,5 @@
+package com.maths;
+
 public class Maths {
 
     private static final double ERROR_TOLERANCE = 1e-15;
