@@ -17,11 +17,11 @@ public class FibonacciIndexTest {
 
     private final int expectedIndex;
     private final long fibonacci;
-    private FibonacciIndex fibonacciIndex;
+    private FibonacciIndexer fibonacciIndex;
 
     @Before
     public void setUp() {
-        fibonacciIndex = new FibonacciIndex();
+        fibonacciIndex = new FibonacciIndexer();
     }
 
     public FibonacciIndexTest(int expectedIndex, long fibonacci) {
